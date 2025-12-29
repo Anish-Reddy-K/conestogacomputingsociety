@@ -1,0 +1,4 @@
+# Netlify redirects for clean URLs
+/conhacks2026    /conhacks2026.html    200
+/conhacks2026/   /conhacks2026.html    200
+
