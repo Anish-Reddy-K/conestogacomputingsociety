@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conestoga Computing Society</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="windows98-theme">
+    <div class="container">
+        <header class="window-frame">
+            <div class="window-titlebar">
+                <span class="window-title">Conestoga Computing Society</span>
+                <div class="window-controls">
+                    <span class="control-btn minimize">_</span>
+                    <span class="control-btn maximize">□</span>
+                    <span class="control-btn close">×</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <h1 class="retro-title">CONESTOGA COMPUTING SOCIETY</h1>
+                <p class="retro-subtitle">Your Computer Science Community at Conestoga College</p>
+            </div>
+        </header>
+
+        <main class="window-frame main-content">
+            <div class="window-titlebar">
+                <span class="window-title">About Us</span>
+            </div>
+            <div class="window-content">
+                <p class="retro-text">
+                    Hey! We're the Conestoga Computing Society - basically a group of CS students and developers 
+                    at Conestoga College who like to code and hang out together.
+                </p>
+                <p class="retro-text">
+                    We run workshops, host hackathons, and organize events throughout the year. If you're into 
+                    coding or just want to learn, you're welcome here. No experience needed.
+                </p>
+                <p class="retro-text">
+                    Drop your email below if you want to know when we're doing stuff.
+                </p>
+            </div>
+        </main>
+
+        <section class="window-frame email-section">
+            <div class="window-titlebar">
+                <span class="window-title">Join Our Community</span>
+            </div>
+            <div class="window-content">
+                <form class="retro-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="email" class="retro-label">Email Address:</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="retro-input" 
+                            placeholder="your.email@conestogac.on.ca"
+                            disabled
+                        >
+                    </div>
+                    <button type="submit" class="retro-button disabled" disabled>
+                        Coming Soon
+                    </button>
+                    <p class="coming-soon-note">We'll be launching soon! Check back in 15 days.</p>
+                </form>
+            </div>
+        </section>
+
+        <section class="window-frame hackathon-section">
+            <div class="window-titlebar">
+                <span class="window-title">Upcoming Event</span>
+            </div>
+            <div class="window-content">
+                <h2 class="retro-heading">ConHacks 2026</h2>
+                <p class="retro-text">
+                    Join us for our annual hackathon! 36 hours of coding, innovation, and fun.
+                </p>
+                <a href="conhacks2026.html" class="retro-button-link">
+                    <button class="retro-button">Learn More →</button>
+                </a>
+            </div>
+        </section>
+
+        <footer class="window-frame footer">
+            <div class="window-content">
+                <p class="retro-text small">© 2026 Conestoga Computing Society | conestogacomputingsociety.com</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
