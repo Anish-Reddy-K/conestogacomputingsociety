@@ -5,6 +5,60 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevMonthBtn = document.getElementById('prev-month');
     const nextMonthBtn = document.getElementById('next-month');
 
+    // Email form submission handler
+    const emailForm = document.getElementById('email-form');
+    const emailInput = document.getElementById('email-input');
+    
+    if (emailForm) {
+        emailForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = emailInput.value.trim();
+            const submitButton = emailForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            // Disable button during submission
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            try {
+                const formData = new FormData();
+                formData.append('email', email);
+                
+                const response = await fetch('submit.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    submitButton.textContent = 'Submitted!';
+                    submitButton.style.backgroundColor = '#000080';
+                    submitButton.style.color = '#FFF';
+                    emailInput.value = '';
+                    
+                    // Reset button after 2 seconds
+                    setTimeout(() => {
+                        submitButton.textContent = originalButtonText;
+                        submitButton.style.backgroundColor = '';
+                        submitButton.style.color = '';
+                        submitButton.disabled = false;
+                    }, 2000);
+                } else {
+                    alert(data.message || 'Failed to submit email. Please try again.');
+                    submitButton.textContent = originalButtonText;
+                    submitButton.disabled = false;
+                }
+            } catch (error) {
+                console.error('Error submitting email:', error);
+                alert('Failed to submit email. Please try again.');
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            }
+        });
+    }
+
     let currentDate = new Date();
     // Limits: 6 months back, 1 year forward
     const minDate = new Date();

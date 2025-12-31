@@ -34,16 +34,19 @@
                     <p class="retro-text text-center">
                         Want to know when the next event is? Drop your email below to get alerts on workshops, hackathons, and socials. No spam, just the good stuff.
                     </p>
-                    <form class="retro-form inline-form" onsubmit="return false;">
+                    <form class="retro-form inline-form" id="email-form">
                         <input 
                             type="email" 
                             class="retro-input" 
+                            id="email-input"
+                            name="email"
                             placeholder="student@conestogac.on.ca"
                             pattern=".+@conestogac\.on\.ca"
                             title="Please enter a valid Conestoga College email address (@conestogac.on.ca)"
+                            required
                         >
                         <button type="submit" class="retro-button">
-                            Sumbit
+                            Submit
                         </button>
                     </form>
                 </div>
