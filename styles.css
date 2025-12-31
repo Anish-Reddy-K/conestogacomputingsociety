@@ -244,6 +244,33 @@ body {
 .retro-button-link {
     text-decoration: none;
     display: inline-block;
+    position: relative;
+}
+
+.retro-button-link[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+    padding: 4px 8px;
+    background: #FFFFE1;
+    border: 1px solid #000;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #808080;
+    border-right: 2px solid #808080;
+    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+    z-index: 1000;
+    pointer-events: none;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.retro-button-link[title] {
+    cursor: not-allowed;
 }
 
 .coming-soon-note {
@@ -550,7 +577,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    padding-top: 10px;
     border-top: 1px dotted #CCC;
 }
 

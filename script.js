@@ -136,9 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="event-description">${event.description}</p>
                 <div class="event-footer">
                     ${event.tags ? `<div class="event-tags">${event.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : '<div></div>'}
-                    <a href="${event.rsvp_link}" target="_blank" class="retro-button-link">
-                        <button class="retro-button small-btn">Register / RSVP</button>
-                    </a>
+                    ${event.rsvp_link === '#' 
+                        ? `<span class="retro-button-link" title="Opening soon">
+                            <button class="retro-button small-btn disabled" disabled>Register / RSVP</button>
+                           </span>`
+                        : `<a href="${event.rsvp_link}" target="_blank" class="retro-button-link">
+                            <button class="retro-button small-btn">Register / RSVP</button>
+                           </a>`
+                    }
                 </div>
             `;
             eventsContainer.appendChild(eventCard);
