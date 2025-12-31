@@ -259,11 +259,6 @@ body {
     text-align: center;
 }
 
-.footer {
-    margin-top: 40px;
-    text-align: center;
-}
-
 .footer .window-content {
     padding: 10px;
 }
@@ -459,7 +454,7 @@ body {
 
 .calendar-day {
     padding: 4px 0;
-    cursor: default;
+    cursor: pointer;
 }
 
 .calendar-day:hover:not(.empty) {
@@ -555,9 +550,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 10px;
     border-top: 1px dotted #CCC;
-    padding-top: 10px;
 }
 
 .event-tags {
