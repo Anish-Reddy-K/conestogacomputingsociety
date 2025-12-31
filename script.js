@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Click sound function
+    const clickSound = new Audio('click.mp3');
+    clickSound.volume = 0.5;
+    
+    function playClickSound() {
+        clickSound.currentTime = 0;
+        clickSound.play().catch(err => {
+            // Ignore errors (e.g., if user hasn't interacted with page yet)
+            console.log('Could not play click sound:', err);
+        });
+    }
+    
+    // Attach click sound to all buttons and clickable elements using event delegation
+    document.addEventListener('click', (e) => {
+        // Check if clicked element is a button, link, or clickable element
+        if (e.target.tagName === 'BUTTON' || 
+            e.target.tagName === 'A' || 
+            e.target.classList.contains('control-btn') ||
+            e.target.classList.contains('calendar-day') ||
+            e.target.closest('button') ||
+            e.target.closest('a')) {
+            playClickSound();
+        }
+    });
+    
     const eventsContainer = document.getElementById('events-container');
     const calendarGrid = document.getElementById('calendar-grid');
     const currentMonthElement = document.getElementById('current-month');
