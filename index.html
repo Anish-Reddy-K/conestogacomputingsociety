@@ -19,7 +19,41 @@
     <div class="container">
         <header class="window-frame">
             <div class="window-titlebar">
-                <span class="window-title">Conestoga Computing Society</span>
+                <span class="window-title">Conestoga Computing Society (CCS)</span>
+                <div class="window-controls">
+                    <span class="control-btn minimize">_</span>
+                    <span class="control-btn maximize">□</span>
+                    <span class="control-btn close">×</span>
+                </div>
+            </div>
+            <div class="window-content header-content">
+                <h1 class="retro-title">CONESTOGA COMPUTING SOCIETY (CCS)</h1>
+                <p class="retro-subtitle">Your Computer Science Community at Conestoga College</p>
+                
+                <div class="header-email-signup">
+                    <p class="retro-text text-center">
+                        Want to know when the next event is? Drop your email below to get alerts on workshops, hackathons, and socials. No spam, just the good stuff.
+                    </p>
+                    <form class="retro-form inline-form" onsubmit="return false;">
+                        <input 
+                            type="email" 
+                            class="retro-input" 
+                            placeholder="student@conestogac.on.ca"
+                            pattern=".+@conestogac\.on\.ca"
+                            title="Please enter a valid Conestoga College email address (@conestogac.on.ca)"
+                            disabled
+                        >
+                        <button type="submit" class="retro-button disabled" disabled>
+                            Sign Me Up!
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <main class="window-frame main-content">
+            <div class="window-titlebar">
+                <span class="window-title">About Us</span>
                 <div class="window-controls">
                     <span class="control-btn minimize">_</span>
                     <span class="control-btn maximize">□</span>
@@ -27,76 +61,72 @@
                 </div>
             </div>
             <div class="window-content">
-                <h1 class="retro-title">CONESTOGA COMPUTING SOCIETY</h1>
-                <p class="retro-subtitle">Your Computer Science Community at Conestoga College</p>
-            </div>
-        </header>
-
-        <main class="window-frame main-content">
-            <div class="window-titlebar">
-                <span class="window-title">About Us</span>
-            </div>
-            <div class="window-content">
                 <p class="retro-text">
-                    Hey! We're the Conestoga Computing Society - basically a group of CS students and developers 
+                    Hey! We're the Conestoga Computing Society (CCS) - basically a group of CS students and developers 
                     at Conestoga College who like to code and hang out together.
                 </p>
                 <p class="retro-text">
                     We run workshops, host hackathons, and organize events throughout the year. If you're into 
                     coding or just want to learn, you're welcome here. No experience needed.
                 </p>
-                <p class="retro-text">
-                    Drop your email below if you want to know when we're doing stuff.
-                </p>
             </div>
         </main>
 
-        <section class="window-frame email-section">
+        <section class="window-frame events-section" id="events-calendar">
             <div class="window-titlebar">
-                <span class="window-title">Join Our Community</span>
+                <span class="window-title">Calendar.exe</span>
+                <div class="window-controls">
+                    <span class="control-btn minimize">_</span>
+                    <span class="control-btn maximize">□</span>
+                    <span class="control-btn close">×</span>
+                </div>
             </div>
             <div class="window-content">
-                <form class="retro-form" onsubmit="return false;">
-                    <div class="form-group">
-                        <label for="email" class="retro-label">Email Address:</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            class="retro-input" 
-                            placeholder="your.email@conestogac.on.ca"
-                            disabled
-                        >
+                <div class="calendar-layout">
+                    <!-- Sidebar / Mini Calendar -->
+                    <div class="calendar-sidebar">
+                        <div class="calendar-widget">
+                            <div class="calendar-header">
+                                <button id="prev-month" class="retro-button tiny-btn">&lt;</button>
+                                <span id="current-month">January 2026</span>
+                                <button id="next-month" class="retro-button tiny-btn">&gt;</button>
+                            </div>
+                            <div id="calendar-grid" class="calendar-grid"></div>
+                        </div>
+                        <div class="perks-box">
+                            <p class="perk-text">[+] Free Pizza</p>
+                            <p class="perk-text">[+] Drinks</p>
+                            <p class="perk-text">[+] Rewards</p>
+                            <p class="small-note">*at applicable events</p>
+                        </div>
                     </div>
-                    <button type="submit" class="retro-button disabled" disabled>
-                        Coming Soon
-                    </button>
-                    <p class="coming-soon-note">Launching on Jan 12</p>
-                </form>
-            </div>
-        </section>
 
-        <section class="window-frame hackathon-section">
-            <div class="window-titlebar">
-                <span class="window-title">Upcoming Events</span>
-            </div>
-            <div class="window-content">
-                <h2 class="retro-heading">ConHacks 2026</h2>
-                <p class="retro-text">
-                    March 27th to 29. Join us for our annual hackathon! 36 hours of coding, innovation, and fun.
-                </p>
-                <a href="https://conhacks.io" class="retro-button-link" target="_blank" rel="noopener noreferrer">
-                    <button class="retro-button">Learn More</button>
-                </a>
+                    <!-- Main Event List -->
+                    <div class="events-feed">
+                        <h2 class="retro-heading">Upcoming Events</h2>
+                        <div id="events-container">
+                            <p class="loading-text">Loading events...</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <footer class="window-frame footer">
+            <div class="window-titlebar">
+                <span class="window-title">Footer</span>
+                <div class="window-controls">
+                    <span class="control-btn minimize">_</span>
+                    <span class="control-btn maximize">□</span>
+                    <span class="control-btn close">×</span>
+                </div>
+            </div>
             <div class="window-content">
-                <p class="retro-text small">© 2026 Conestoga Computing Society | conestogacomputingsociety.com</p>
+                <p class="retro-text small">© 2026 Conestoga Computing Society (CCS) | conestogacomputingsociety.com</p>
             </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
 

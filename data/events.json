@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "title": "Navigating the Job Market in the Age of AI",
+    "date": "2026-01-15",
+    "time": "6:00 PM",
+    "location": "TBD",
+    "description": "Join us for an insightful session with Subodh Kumar (Author, Harvard Business School Grad) and Anish (CCS President). Learn strategies to stand out in the AI era.",
+    "rsvp_link": "#",
+    "tags": ["Career", "AI", "Talk"],
+    "highlight": false
+  },
+  {
+    "id": 2,
+    "title": "Capture the Flag (CTF)",
+    "date": "2026-01-29",
+    "time": "6:00 PM",
+    "location": "TBD",
+    "description": "Test your cybersecurity skills! Hosted by Inshal. Possible collaboration with Cyber Association.",
+    "rsvp_link": "#",
+    "tags": ["Security", "Competition", "Fun"],
+    "highlight": false
+  },
+  {
+    "id": 3,
+    "title": "CCS Event (TBD)",
+    "date": "2026-02-12",
+    "time": "TBD",
+    "location": "TBD",
+    "description": "Details coming soon. Expect pizza, drinks, and great tech discussions!",
+    "rsvp_link": "#",
+    "tags": ["Community"],
+    "highlight": false
+  },
+  {
+    "id": 4,
+    "title": "CCS Event (TBD)",
+    "date": "2026-02-26",
+    "time": "TBD",
+    "location": "TBD",
+    "description": "Details coming soon.",
+    "rsvp_link": "#",
+    "tags": ["Community"],
+    "highlight": false
+  },
+  {
+    "id": 5,
+    "title": "CCS Event (TBD)",
+    "date": "2026-03-12",
+    "time": "TBD",
+    "location": "TBD",
+    "description": "Details coming soon.",
+    "rsvp_link": "#",
+    "tags": ["Community"],
+    "highlight": false
+  },
+  {
+    "id": 6,
+    "title": "CONHACKS 2026",
+    "date": "2026-03-27",
+    "time": "5:00 PM",
+    "location": "Conestoga College",
+    "description": "Our main event of the year! 36 hours of coding, innovation, and fun. Don't miss out.",
+    "rsvp_link": "https://conhacks.io",
+    "tags": ["Hackathon", "Main Event"],
+    "highlight": true
+  }
+]
+
