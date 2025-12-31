@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Click sound function
-    const clickSound = new Audio('click.mp3');
+    const clickSound = new Audio('assets/audio/click.mp3');
     clickSound.volume = 0.5;
     
     function playClickSound() {
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const formData = new FormData();
                 formData.append('email', email);
                 
-                const response = await fetch('submit.php', {
+                const response = await fetch('api/submit.php', {
                     method: 'POST',
                     body: formData
                 });
