@@ -113,7 +113,17 @@ body {
 
 .inline-form .retro-input {
     width: 250px;
-    height: 100%; /* Ensure it fills container height if needed, but flex stretch handles it mostly. padding ensures min height */
+    padding: 8px 6px; /* Match button vertical padding */
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-size: 12px;
+}
+
+.inline-form .retro-button {
+    padding: 8px 20px; /* Match vertical padding with input */
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-size: 12px;
 }
 
 .text-center {
@@ -171,7 +181,10 @@ body {
 .retro-input {
     width: 100%;
     padding: 6px;
-    border: 2px inset #C0C0C0;
+    border-top: 2px inset #808080;
+    border-left: 2px inset #808080;
+    border-bottom: 2px inset #FFFFFF;
+    border-right: 2px inset #FFFFFF;
     background: #FFF;
     font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
     font-size: 12px;
@@ -185,11 +198,15 @@ body {
 
 .retro-button {
     padding: 8px 20px;
-    background: #C0C0C0;
-    border-top: 2px solid #808080;
-    border-right: 2px solid #808080;
-    border-bottom: 2px solid #808080;
-    border-left: 2px solid #808080;
+    background: #E0E0E0;
+    border-top: 2px outset #E0E0E0;
+    border-right: 2px outset #E0E0E0;
+    border-bottom: 2px outset #E0E0E0;
+    border-left: 2px outset #E0E0E0;
+    border-top-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    border-bottom-color: #808080;
+    border-right-color: #808080;
     font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
     font-size: 12px;
     font-weight: bold;
@@ -197,19 +214,21 @@ body {
     color: #000;
     text-transform: uppercase;
     transition: all 0.1s;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .retro-button:hover:not(.disabled) {
-    background: #E0E0E0;
-    box-shadow: 0 0 8px rgba(192, 192, 192, 0.6);
+    background: #F0F0F0;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .retro-button:active:not(.disabled) {
-    border-top: 2px inset #C0C0C0;
-    border-right: 2px inset #C0C0C0;
-    border-bottom: 2px inset #C0C0C0;
-    border-left: 2px inset #C0C0C0;
-    background: #B0B0B0;
+    border-top: 2px inset #808080;
+    border-left: 2px inset #808080;
+    border-bottom: 2px inset #FFFFFF;
+    border-right: 2px inset #FFFFFF;
+    background: #D0D0D0;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .retro-button.disabled {
@@ -470,6 +489,7 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
     color: #000080;
+    text-align: left;
 }
 
 .small-note {
