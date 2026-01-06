@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "title": "Navigating the Job Market in the Age of AI",
-    "date": "2026-01-15",
-    "time": "6:00 PM",
-    "location": "TBD",
-    "description": "Join us for an insightful session with Subodh Kumar (Author, Harvard Business School Grad) and Anish (CCS President). Learn strategies to stand out in the AI era.",
-    "rsvp_link": "#",
+    "title": "Navigating Tech Careers in the Age of AI",
+    "date": "2026-01-21",
+    "time": "7:00 PM",
+    "location": "Conestoga College, Waterloo Campus, Room: TBD",
+    "description": "Join us for an insightful session with Subodh Kumar (Author, Harvard Business School alumnus) and Anish (CCS President). Learn practical strategies to stand out as a developer as AI becomes a teammate.",
+    "rsvp_link": "https://forms.gle/8DK3f6jnMU9uZmEV6",
     "tags": ["Career", "AI", "Talk"],
-    "highlight": false
+    "highlight": true
   },
   {
     "id": 2,
