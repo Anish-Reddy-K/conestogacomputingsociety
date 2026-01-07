@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Navigating Tech Careers in the Age of AI",
-    "date": "2026-01-21",
+    "date": "TBD",
     "time": "7:00 PM",
     "location": "Conestoga College, Waterloo Campus, Room: TBD",
     "description": "Join us for an insightful session with Subodh Kumar (Author, Harvard Business School alumnus) and Anish (CCS President). Learn practical strategies to stand out as a developer as AI becomes a teammate.",
@@ -13,45 +13,12 @@
   {
     "id": 2,
     "title": "Capture the Flag (CTF)",
-    "date": "2026-01-29",
+    "date": "TBD",
     "time": "6:00 PM",
     "location": "TBD",
     "description": "Test your cybersecurity skills! Hosted by Inshal. Possible collaboration with Cyber Association.",
     "rsvp_link": "#",
     "tags": ["Security", "Competition", "Fun"],
-    "highlight": false
-  },
-  {
-    "id": 3,
-    "title": "CCS Event (TBD)",
-    "date": "2026-02-12",
-    "time": "TBD",
-    "location": "TBD",
-    "description": "Details coming soon. Expect pizza, drinks, and great tech discussions!",
-    "rsvp_link": "#",
-    "tags": ["Community"],
-    "highlight": false
-  },
-  {
-    "id": 4,
-    "title": "CCS Event (TBD)",
-    "date": "2026-02-26",
-    "time": "TBD",
-    "location": "TBD",
-    "description": "Details coming soon.",
-    "rsvp_link": "#",
-    "tags": ["Community"],
-    "highlight": false
-  },
-  {
-    "id": 5,
-    "title": "CCS Event (TBD)",
-    "date": "2026-03-12",
-    "time": "TBD",
-    "location": "TBD",
-    "description": "Details coming soon.",
-    "rsvp_link": "#",
-    "tags": ["Community"],
     "highlight": false
   },
   {
