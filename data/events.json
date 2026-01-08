@@ -6,9 +6,9 @@
     "time": "7:00 PM",
     "location": "Conestoga College, Waterloo Campus, Room: TBD",
     "description": "Join us for an insightful session with Subodh Kumar (Author, Harvard Business School alumnus) and Anish (CCS President). Learn practical strategies to stand out as a developer as AI becomes a teammate.",
-    "rsvp_link": "https://forms.gle/8DK3f6jnMU9uZmEV6",
+    "rsvp_link": "#",
     "tags": ["Career", "AI", "Talk"],
-    "highlight": true
+    "highlight": false
   },
   {
     "id": 2,

@@ -99,8 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             allEvents = data;
             
-            // Sort events by date
-            allEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+            // Sort events by date (TBD dates go to the end)
+            allEvents.sort((a, b) => {
+                if (a.date === 'TBD' || a.date.toUpperCase() === 'TBD') return 1;
+                if (b.date === 'TBD' || b.date.toUpperCase() === 'TBD') return -1;
+                return new Date(a.date) - new Date(b.date);
+            });
 
             // Initial Render
             renderEventsList(allEvents);
@@ -144,8 +148,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         events.forEach(event => {
-            const eventDate = new Date(event.date + 'T00:00:00'); 
-            const dateString = eventDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+            let dateString;
+            if (event.date === 'TBD' || event.date.toUpperCase() === 'TBD') {
+                dateString = 'TBD';
+            } else {
+                const eventDate = new Date(event.date + 'T00:00:00'); 
+                dateString = eventDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+            }
 
             const eventCard = document.createElement('div');
             eventCard.id = `event-${event.id}`;
